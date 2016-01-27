@@ -10,5 +10,5 @@ package com.mycompany.exercicio4.cdp;
  * @author Ricardo
  */
 public interface ImpostoStrategy {
-    public void ensureCorrectImposto(double valor, int dependentes);
+    public double ensureCorrectImposto(double valor, int dependentes);
 }

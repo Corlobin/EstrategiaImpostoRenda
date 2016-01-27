@@ -13,7 +13,7 @@ import java.util.HashMap;
  */
 public class ImpostoRenda {
     public ImpostoStrategy impostoStrategy;
-
+    public double impostoCalculado;
     public ImpostoRenda() {
         impostoStrategy = new Faixa1ImpostoStrategy();
     }
@@ -27,9 +27,14 @@ public class ImpostoRenda {
         else if(valor > 4271.59)
             this.impostoStrategy = new Faixa5ImpostoStrategy();
         
-        impostoStrategy.ensureCorrectImposto(valor, dependentes);
+        this.impostoCalculado = impostoStrategy.ensureCorrectImposto(valor, dependentes);
         
     }
+
+    public double getImpostoCalculado() {
+        return impostoCalculado;
+    }
+    
     
 }
 

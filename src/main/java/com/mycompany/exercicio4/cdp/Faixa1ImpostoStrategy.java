@@ -14,8 +14,9 @@ public class Faixa1ImpostoStrategy implements ImpostoStrategy {
         Até 1.710,78
     */
     @Override
-    public void ensureCorrectImposto(double valor, int dependentes) {
+    public double ensureCorrectImposto(double valor, int dependentes) {
         System.out.println("Isento!");
+        return 0;
     }
    
 }

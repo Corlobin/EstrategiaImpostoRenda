@@ -12,10 +12,11 @@ package com.mycompany.exercicio4.cdp;
 public class Faixa2ImpostoStrategy implements ImpostoStrategy {
     // Essa faixa ela pega entre 1.710,79 até 2.563,91
     @Override
-    public void ensureCorrectImposto(double valor, int dependentes) {
+    public double ensureCorrectImposto(double valor, int dependentes) {
         double valorInicial = valor - (dependentes * ConstanteImposto.VALOR_DEPENDENTE);
         double valorFinal = valorInicial * 0.075;
         System.out.println("Imposto de renda a pagar " + valorFinal);
+        return valorFinal;
     }
     
 }
